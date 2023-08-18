@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="headerName"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Header"
+            android:textSize="20sp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@android:color/holo_blue_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/headerItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="@{headerName}"
+            android:textSize="20sp"
+            tools:text="Item 1"
+            android:layout_marginEnd="20dp" />
+
+    </LinearLayout>
+</layout>
