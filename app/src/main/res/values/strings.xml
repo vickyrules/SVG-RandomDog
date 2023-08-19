@@ -3,4 +3,8 @@
     <string name="generate_dogs">Generate Dogs!</string>
     <string name="my_recently_generated_dogs">My Recently Generated Dogs!</string>
     <string name="random_dog_generator">Random Dog Generator!</string>
+    <string name="generate">Generate</string>
+    <string name="click_the_button_below">Click the Button below</string>
+    <string name="clear_all">Clear All</string>
+    <string name="no_images_to_show">No Images to Show</string>
 </resources>
