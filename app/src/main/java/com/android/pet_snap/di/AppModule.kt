@@ -1,9 +1,11 @@
 package com.android.pet_snap.di
 
 import android.content.Context
+import androidx.collection.LruCache
 import androidx.room.Room
 import com.android.pet_snap.data.local.DogDao
 import com.android.pet_snap.data.local.DogDatabase
+import com.android.pet_snap.data.local.DogEntity
 import com.android.pet_snap.network.ApiService
 import com.android.pet_snap.network.ApiService.Companion.BASE_URL
 import dagger.Module
@@ -65,6 +67,11 @@ internal object AppModule {
     @Provides
     @Singleton
     fun provideDogDao(appDatabase: DogDatabase): DogDao =  appDatabase.dogDao()
+
+
+    @Provides
+    @Singleton
+    fun provideLruCache(appDatabase: DogDatabase): LruCache<String,DogEntity> =  appDatabase.cache
 
 
 

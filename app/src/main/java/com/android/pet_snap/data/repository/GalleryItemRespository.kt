@@ -7,7 +7,9 @@ interface GalleryItemsRepository {
     /**
      * get all items from the data source
      */
+
     fun getAllDogsStream(): Flow<List<DogEntity>>
+
 
     /**
      * Insert item in the data source
@@ -17,12 +19,13 @@ interface GalleryItemsRepository {
     /**
      * Delete item from the data source
      */
-    suspend fun deleteDog(dog: DogEntity)
+    suspend fun deleteDog(imageUrl:String)
 
     /**
      * Delete all items from the data source
      */
     suspend fun deleteAllDog()
 
+    suspend fun awakeLruSession(dogs:List<DogEntity>)
 
 }
